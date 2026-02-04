@@ -2,7 +2,7 @@
 ==========================================================================================
 DATA CLEANING CHANGE RECORD
 ==========================================================================================
-Date: 2026-02-04 11:42:53
+Date: 2026-02-04 16:08:18
 Source Dataset: Driving Data (KIA SOUL, 10 Drivers A-J, 150728-160714)
 ==========================================================================================
 
@@ -70,9 +70,11 @@ Source Dataset: Driving Data (KIA SOUL, 10 Drivers A-J, 150728-160714)
    Noise detection completed:
 
    A. Zero-Heavy Columns (potential sensor noise):
-      - Accelerator_Pedal_value: 75.07% zeros (likely valid: idle/no-activity state)
-      - Steering_wheel_speed: 73.35% zeros (likely valid: idle/no-activity state)
-      - Converter_clutch: 62.75% zeros (likely valid: idle/no-activity state)
+      - Fuel_Pressure: 100.00% zeros (likely valid: idle/no-activity state)
+      - Inhibition_of_engine_fuel_cut_off: 100.00% zeros (likely valid: idle/no-activity state)
+      - Filtered_Accelerator_Pedal_value: 100.00% zeros (likely valid: idle/no-activity state)
+      - TCU_requested_engine_RPM_increase: 100.00% zeros (likely valid: idle/no-activity state)
+      - Glow_plug_control_request: 100.00% zeros (likely valid: idle/no-activity state)
 
 
    B. Near-Duplicate Features (High Correlation > 0.95):
@@ -89,7 +91,7 @@ Source Dataset: Driving Data (KIA SOUL, 10 Drivers A-J, 150728-160714)
       - All numeric columns correctly typed
       - Categorical columns: Class
 
-   Final data quality: 94,380 rows × 45 columns
+   Final data quality: 94,380 rows × 31 columns
 
 ==========================================================================================
 CLEANING SUMMARY
@@ -107,10 +109,10 @@ CHANGES MADE:
 
 FINAL STATE:
    Rows: 94,380 (0.00% reduction)
-   Columns: 45
+   Columns: 31
 
 DATA QUALITY:
-   Missing values: 283140 (0.00%)
+   Missing values: 0 (0.00%)
    Duplicates: 0
    Validation: ✓ PASSED
 
